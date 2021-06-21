@@ -40,7 +40,7 @@ with open("websitedetails.csv","a",newline="",encoding="UTF-8") as f:
         try:
             seed=main.find_element_by_xpath(".//span[@class='investment_stage']").get_attribute("innerText")
         except Exception as s:
-            seed="k"
+            seed=""
         csv_file.writerow({
             "Business Name":business_name,"Website":website,"Business Title":business_title,"Year":year,"Seed":seed
         })
